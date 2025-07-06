@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "ssh-tool": {
+      "command": "python3",
+      "args": ["mcp_ssh_tool.py"],
+      "env": {
+        "SSH_HOST": "127.0.0.1",
+        "SSH_USER": "root",
+        "SSH_PASSWORD": "",
+        "SSH_PORT": "22"
+      }
+    }
+  }
+} 

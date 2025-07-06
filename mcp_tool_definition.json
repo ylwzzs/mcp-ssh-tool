@@ -1,0 +1,73 @@
+{
+  "name": "ssh-tool",
+  "version": "1.0.0",
+  "description": "基于MCP协议的远程SSH运维工具",
+  "tools": [
+    {
+      "name": "exec_command",
+      "description": "在远程服务器上执行任意命令",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "要执行的命令"
+          }
+        },
+        "required": ["command"]
+      }
+    },
+    {
+      "name": "list_containers",
+      "description": "获取Docker容器列表",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_container_logs",
+      "description": "获取指定容器的日志",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "container": {
+            "type": "string",
+            "description": "容器名称或ID"
+          },
+          "lines": {
+            "type": "integer",
+            "description": "要获取的日志行数",
+            "default": 100
+          }
+        },
+        "required": ["container"]
+      }
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "host": {
+        "type": "string",
+        "description": "SSH服务器地址",
+        "default": "127.0.0.1"
+      },
+      "user": {
+        "type": "string",
+        "description": "SSH用户名",
+        "default": "root"
+      },
+      "password": {
+        "type": "string",
+        "description": "SSH密码"
+      },
+      "port": {
+        "type": "integer",
+        "description": "SSH端口",
+        "default": 22
+      }
+    },
+    "required": ["host", "user", "password"]
+  }
+} 
