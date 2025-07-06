@@ -48,12 +48,12 @@ def setup_cursor_mcp():
         "ssh-tool": {
             "command": "python3",
             "args": [str(ssh_tool_path)],
-            "env": {
-                "SSH_HOST": "8.155.24.17",
-                "SSH_USER": "root",
-                "SSH_PASSWORD": "D4u1o5!@",
-                "SSH_PORT": "22"
-            }
+                    "env": {
+            "SSH_HOST": "YOUR_SERVER_IP",
+            "SSH_USER": "YOUR_USERNAME",
+            "SSH_PASSWORD": "YOUR_PASSWORD",
+            "SSH_PORT": "22"
+        }
         }
     }
     
@@ -78,8 +78,8 @@ def setup_cursor_mcp():
     
     print("\n🎉 Cursor MCP SSH工具配置完成！")
     print("\n📋 配置信息:")
-    print(f"  服务器: 8.155.24.17")
-    print(f"  用户: root")
+    print(f"  服务器: YOUR_SERVER_IP")
+    print(f"  用户: YOUR_USERNAME")
     print(f"  端口: 22")
     print(f"  SSH工具路径: {ssh_tool_path}")
     

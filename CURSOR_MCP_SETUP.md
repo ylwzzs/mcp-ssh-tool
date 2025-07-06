@@ -6,9 +6,9 @@
 
 ## 服务器信息
 
-- **主机**: 8.155.24.17
-- **用户**: root
-- **密码**: D4u1o5!@
+- **主机**: YOUR_SERVER_IP
+- **用户**: YOUR_USERNAME
+- **密码**: YOUR_PASSWORD
 - **端口**: 22
 
 ## 步骤1: 确认工具已准备就绪
@@ -16,7 +16,7 @@
 确保SSH工具项目已正确设置：
 
 ```bash
-cd /Users/Duo/WPS\ 云文档/MytechCode/mcp-ssh-tool
+cd /path/to/your/mcp-ssh-tool
 source venv/bin/activate
 ```
 
@@ -49,11 +49,11 @@ python3 mcp_ssh_wrapper.py list_containers
   "mcpServers": {
     "ssh-tool": {
       "command": "python3",
-      "args": ["/Users/Duo/WPS 云文档/MytechCode/mcp-ssh-tool/mcp_ssh_tool.py"],
+      "args": ["/path/to/your/mcp-ssh-tool/mcp_ssh_tool.py"],
       "env": {
-        "SSH_HOST": "8.155.24.17",
-        "SSH_USER": "root",
-        "SSH_PASSWORD": "D4u1o5!@",
+        "SSH_HOST": "YOUR_SERVER_IP",
+        "SSH_USER": "YOUR_USERNAME",
+        "SSH_PASSWORD": "YOUR_PASSWORD",
         "SSH_PORT": "22"
       }
     }
@@ -77,11 +77,11 @@ open ~/Library/Application\ Support/Cursor/User/settings.json
   "mcpServers": {
     "ssh-tool": {
       "command": "python3",
-      "args": ["/Users/Duo/WPS 云文档/MytechCode/mcp-ssh-tool/mcp_ssh_tool.py"],
+      "args": ["/path/to/your/mcp-ssh-tool/mcp_ssh_tool.py"],
       "env": {
-        "SSH_HOST": "8.155.24.17",
-        "SSH_USER": "root",
-        "SSH_PASSWORD": "D4u1o5!@",
+        "SSH_HOST": "YOUR_SERVER_IP",
+        "SSH_USER": "YOUR_USERNAME",
+        "SSH_PASSWORD": "YOUR_PASSWORD",
         "SSH_PORT": "22"
       }
     }
@@ -152,7 +152,7 @@ open ~/Library/Application\ Support/Cursor/User/settings.json
 
 1. **检查工具状态**：
 ```bash
-cd /Users/Duo/WPS\ 云文档/MytechCode/mcp-ssh-tool
+cd /path/to/your/mcp-ssh-tool
 source venv/bin/activate
 python3 mcp_ssh_wrapper.py list_containers
 ```
@@ -165,7 +165,7 @@ python3 mcp_ssh_wrapper.py list_containers
 
 3. **测试SSH连接**：
 ```bash
-ssh root@8.155.24.17
+ssh YOUR_USERNAME@YOUR_SERVER_IP
 ```
 
 ## 安全注意事项
@@ -179,7 +179,7 @@ ssh root@8.155.24.17
 
 如果需要更改服务器配置：
 
-1. 编辑 `config.json` 文件
+1. 编辑配置文件或环境变量
 2. 更新Cursor设置中的环境变量
 3. 重启Cursor编辑器
 
